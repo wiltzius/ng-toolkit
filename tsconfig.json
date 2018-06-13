@@ -1,7 +1,36 @@
 {
- "compilerOptions": {
-   "experimentalDecorators": true,
-   "lib": [ "dom", "esnext" ]
- }
+  "compileOnSave": false,
+  "compilerOptions": {
+    "outDir": "./_publish/scripts",
+    "baseUrl": "./",
+    "paths": {
+      "@echidna/*": [
+        "./client_ng2/echidna_link/*"
+      ]
+    },
+    "preserveSymlinks": true,
+    "allowJs": true,
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noStrictGenericChecks": true,
+    "skipLibCheck": true,
+    "strictPropertyInitialization": false,
+    "strict": true,
+    "target": "es6",
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "lib": [
+      "es2017",
+      "dom"
+    ]
+  },
+  "angularCompilerOptions": {
+    "mainPath": "./app/main.ts"
+  }
 }
-

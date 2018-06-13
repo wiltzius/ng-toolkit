@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { EchoService } from './services/echo.service';
-import { Observable } from 'rxjs/Observable';
- 
+import { Observable } from 'rxjs';
+
 @Component({
  selector: 'my-app',
  templateUrl: `app.component.html`,

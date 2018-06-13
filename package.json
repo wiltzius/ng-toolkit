@@ -16,24 +16,25 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@angular/compiler-cli": "^5.2.4",
-    "@ngtools/webpack": "^1.9.8",
-    "copy-webpack-plugin": "^4.3.1",
-    "html-webpack-plugin": "^2.30.1",
-    "raw-loader": "^0.5.1",
-    "script-ext-html-webpack-plugin": "^1.8.8",
-    "typescript": "^2.7.1",
-    "webpack": "^3.10.0"
+    "@angular/compiler-cli": "6.0.2",
+    "@ngtools/webpack": "6.0.7",
+    "copy-webpack-plugin": "4.5.1",
+    "raw-loader": "0.5.1",
+    "script-ext-html-webpack-plugin": "^2.0.1",
+    "typescript": "2.7.2",
+    "webpack": "4.11.1",
+    "webpack-cli": "^3.0.4"
   },
   "dependencies": {
-    "@angular/common": "^5.2.4",
-    "@angular/compiler": "^5.2.4",
-    "@angular/core": "^5.2.4",
-    "@angular/platform-browser": "^5.2.4",
-    "@angular/platform-browser-dynamic": "^5.2.4",
-    "ejs": "^2.5.7",
-    "express": "^4.16.2",
-    "rxjs": "^5.5.6",
-    "zone.js": "^0.8.20"
+    "@angular/common": "6.0.2",
+    "@angular/compiler": "6.0.2",
+    "@angular/core": "6.0.2",
+    "@angular/platform-browser": "6.0.2",
+    "@angular/platform-browser-dynamic": "6.0.2",
+    "ejs": "2.5.7",
+    "express": "4.16.2",
+    "html-webpack-plugin": "^3.2.0",
+    "rxjs": "6.1.0",
+    "zone.js": "0.8.26"
   }
 }
