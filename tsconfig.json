@@ -29,8 +29,5 @@
       "es2017",
       "dom"
     ]
-  },
-  "angularCompilerOptions": {
-    "mainPath": "./app/main.ts"
   }
 }

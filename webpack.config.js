@@ -28,10 +28,11 @@ module.exports = function () {
       new HtmlWebpackPlugin({
         template: __dirname + '/src/index.html',
         output: __dirname + '/dist',
-        inject: 'head'
+        inject: 'body'
       }),
       new AngularCompilerPlugin({
         tsConfigPath: './tsconfig.json',
+        mainPath: './src/main.ts',
         sourceMap: true
       })
     ]
