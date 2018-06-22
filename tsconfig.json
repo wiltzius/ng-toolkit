@@ -3,11 +3,6 @@
   "compilerOptions": {
     "outDir": "./_publish/scripts",
     "baseUrl": "./",
-    "paths": {
-      "@echidna/*": [
-        "./client_ng2/echidna_link/*"
-      ]
-    },
     "preserveSymlinks": true,
     "allowJs": true,
     "sourceMap": true,

@@ -5,7 +5,9 @@ const {AngularCompilerPlugin} = require('@ngtools/webpack');
 
 module.exports = function () {
   return {
-    entry: './src/main.ts',
+    entry: {
+      main: './src/main.ts',
+    },
     output: {
       path: __dirname + '/dist',
       filename: 'app.js'

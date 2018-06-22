@@ -1,7 +1,10 @@
-span {   
-   color: purple;
-   display: block;
-   background: #ccc;
-   padding: 5px;
+@import "../../node_modules/@angular/material/prebuilt-themes/indigo-pink.css";
+
+span {
+  color: purple;
+  display: block;
+  background: #ccc;
+  padding: 5px;
 }
+
 
