@@ -1,6 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const {AngularCompilerPlugin} = require('@ngtools/webpack');
+// const {AngularCompilerPlugin} = require('@ngtools/webpack');
 
 
 module.exports = function () {
@@ -17,9 +17,24 @@ module.exports = function () {
     },
     module: {
       rules: [
-        {test: /\.ts$/, loaders: ['@ngtools/webpack']},
+        // {test: /\.ts$/, loaders: ['@ngtools/webpack']},
         {test: /\.css$/, loader: 'raw-loader'},
-        {test: /\.html$/, loader: 'raw-loader'}
+        {test: /\.html$/, loader: 'raw-loader'},
+        {
+          test: /\.ts$/,
+          use: [
+            {
+              loader: 'awesome-typescript-loader',
+              options: {
+                configFileName: 'tsconfig.json',
+                useCache: true
+              }
+            },
+            {
+              loader: 'angular2-template-loader'
+            },
+          ]
+        },
       ]
     },
 
@@ -32,12 +47,12 @@ module.exports = function () {
         output: __dirname + '/dist',
         inject: 'body'
       }),
-      new AngularCompilerPlugin({
-        tsConfigPath: './tsconfig.json',
-        // mainPath: './src/main.ts',
-        entryModule: './src/app/app.module.ts#AppModule',
-        sourceMap: true
-      })
+      // new AngularCompilerPlugin({
+      //   tsConfigPath: './tsconfig.json',
+      //   // mainPath: './src/main.ts',
+      //   entryModule: './src/app/app.module.ts#AppModule',
+      //   sourceMap: true
+      // })
     ]
   };
 };
