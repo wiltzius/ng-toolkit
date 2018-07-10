@@ -13,8 +13,8 @@ declare const angular: any;
 
 // Downgraded Angular 2 app
 const bootstrapFn = () => {
-  const platformRef = platformBrowserDynamic();
-  return platformRef.bootstrapModule(AppModule);
+  // const platformRef = platformBrowserDynamic();
+  return platformBrowserDynamic().bootstrapModule(AppModule);
 };
 const downgradedModule = downgradeModule(bootstrapFn);
 

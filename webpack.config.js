@@ -13,7 +13,8 @@ module.exports = function () {
       filename: 'app.js'
     },
     resolve: {
-      extensions: ['.ts', '.js']
+      extensions: ['.ts', '.js'],
+      symlinks: false,
     },
     module: {
       rules: [
@@ -35,7 +36,7 @@ module.exports = function () {
       new AngularCompilerPlugin({
         tsConfigPath: './tsconfig.json',
         // mainPath: './src/main.ts',
-        entryModule: './src/app/app.module.ts#AppModule',
+        entryModule: './src/app/app.module#AppModule',
         sourceMap: true
       })
     ]
