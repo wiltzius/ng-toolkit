@@ -7,15 +7,15 @@ import { AppModule } from './app/app.module';
 import { downgradeComponent, downgradeModule } from '@angular/upgrade/static';
 import { MatSelectModule } from '@angular/material/select';
 import { NewComponent } from './app/new-component';
+import { StaticProvider } from '@angular/core';
 
 declare const angular: any;
-// declare var ang1app: any;
 
 // Downgraded Angular 2 app
-const bootstrapFn = () => {
-  // const platformRef = platformBrowserDynamic();
-  return platformBrowserDynamic().bootstrapModule(AppModule);
-};
+const bootstrapFn = (extraProviders: StaticProvider[]) => {
+    return platformBrowserDynamic(extraProviders).bootstrapModule(AppModule);
+  }
+;
 const downgradedModule = downgradeModule(bootstrapFn);
 
 // list of Angular 1 app dependencies, which includes the downgraded Angular 2 app
